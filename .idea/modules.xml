@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/configser/configser.iml" filepath="$PROJECT_DIR$/configser/configser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/configser/configser.iml" filepath="$PROJECT_DIR$/configser/configser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consumerser/consumerser.iml" filepath="$PROJECT_DIR$/consumerser/consumerser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consumerser/consumerser.iml" filepath="$PROJECT_DIR$/consumerser/consumerser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eurakeser/eurakeser.iml" filepath="$PROJECT_DIR$/eurakeser/eurakeser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eurakeser/eurakeser.iml" filepath="$PROJECT_DIR$/eurakeser/eurakeser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oauthser/oauthser.iml" filepath="$PROJECT_DIR$/oauthser/oauthser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oauthser/oauthser.iml" filepath="$PROJECT_DIR$/oauthser/oauthser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/productorser/productorser.iml" filepath="$PROJECT_DIR$/productorser/productorser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/productorser/productorser.iml" filepath="$PROJECT_DIR$/productorser/productorser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/springclouddemo.iml" filepath="$PROJECT_DIR$/.idea/springclouddemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/turbineser/turbineser.iml" filepath="$PROJECT_DIR$/turbineser/turbineser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/turbineser/turbineser.iml" filepath="$PROJECT_DIR$/turbineser/turbineser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zipkinser/zipkinser.iml" filepath="$PROJECT_DIR$/zipkinser/zipkinser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zipkinser/zipkinser.iml" filepath="$PROJECT_DIR$/zipkinser/zipkinser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuulser/zuulser.iml" filepath="$PROJECT_DIR$/zuulser/zuulser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuulser/zuulser.iml" filepath="$PROJECT_DIR$/zuulser/zuulser.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: turbineser
+server:
+  port: 8767
+eureka:
+  instance:
+    lease-expiration-duration-in-seconds: 20
+    lease-renewal-interval-in-seconds: 10
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}:${spring.application.name}
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    registry-fetch-interval-seconds: 10
+turbine:
+  app-config: consumerser       #,traffic-base,traffic-common,traffic-planning  服务id
+  cluster-name-expression: "'default'"
+  combine-host-port: true

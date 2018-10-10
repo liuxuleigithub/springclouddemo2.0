@@ -1,0 +1,22 @@
+eureka:
+  client:
+      service-url:
+        defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: productorser
+  cloud:
+      config:
+        fail-fast: true
+        discovery:
+          enabled: true
+          service-id: configser
+        profile: prod
+        label: master
+        username: config
+        password: 123456
+      inetutils:
+        use-only-site-local-interfaces: true
+server:
+  port: 8762
+

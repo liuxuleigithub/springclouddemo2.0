@@ -1,0 +1,65 @@
+spring:
+#  zipkin:              #不集成kafka配置方式   通过http追踪
+#    baseUrl:  localhost:9411
+  sleuth:
+        web:
+          client:
+            enabled: true
+        sampler:
+          percentage: 1
+  cloud:              #kafka集成方式   数据先存储在kafka中然后zipkin从kafka中读取追踪数据
+      stream:
+         kafka:
+            binder:
+                 brokers: 127.0.0.1
+                 defaultBrokerPort: 9092
+                 zkNodes: 127.0.0.1
+                 defaultZkPort: 2181
+                 autoCreateTopics: true
+                 autoAddPartitions: true
+         bindings:
+            output:            #默认发送通道
+                destination:  orgChangeTopicDefault    #定义topic
+                content-type: application/json  #传输格式
+                group: licensingGroupDefault
+            outboundOrgChanges:    #自定义消息发送通道
+                destination:  orgChangeTopic   #定义topic
+                content-type: application/json  #传输格式
+                group: licensingGroup
+            outboundOrgChanges2:    #自定义消息发送通道
+                destination:  orgChangeTopic2    #定义topic
+                content-type: application/json  #传输格式
+                group: licensingGroup2
+  # mysql 属性配置
+  datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://101.132.74.104:3306/springclouddemo
+        username: root
+        password: 'ABC456lxl:'
+  jpa:
+    hibernate:
+#      ddl-auto: create #ddl-auto:设为create表示每次都重新建表
+      ddl-auto: update #ddl-auto:设为update表示每次都不会重新建表
+    show-sql: true
+
+
+eureka:
+  instance:
+    lease-expiration-duration-in-seconds: 20
+    lease-renewal-interval-in-seconds: 10
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}:${spring.application.name}
+  client:
+    registry-fetch-interval-seconds: 10
+
+
+
+
+# 打印日志
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+

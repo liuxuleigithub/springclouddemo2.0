@@ -1,0 +1,75 @@
+spring:
+  application:
+    name: zuulser
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: 127.0.0.1
+          defaultBrokerPort: 9092
+          zkNodes: 127.0.0.1
+          defaultZkPort: 2181
+          autoCreateTopics: true
+          autoAddPartitions: true
+    config:
+      fail-fast: true
+      discovery:
+        enabled: true
+        service-id: configser
+      profile: prod       #激活环境
+      label: master     #分支
+      username: config
+      password: 123456
+    inetutils:
+      use-only-site-local-interfaces: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+zuul:
+  semaphore:
+    max-semaphores: 30000    #Hystrix最大的并发请求
+  retryable: true
+  ignoredServices: '*' #忽略默认路由，手动创建路由规则，防止生产者路由暴露  zuul会自动创建每个服务的默认路由 根据serviceId生成前缀，安全考虑应关闭
+  routes:
+    consumerser:
+      path: /api/**   #消费者路由
+      serviceId: consumerser
+    zipkinser:
+      path:  /**    #追踪路由
+      serviceId: zipkinser
+    productorser:
+      path: /pro/**     #生产者路由
+      serviceId: productorser
+    oauthser:
+      path: /**     #生产者路由
+      serviceId: oauthser
+
+consumerser:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule        #application方式配置均衡策略
+    ConnectTimeout: 1000
+    ReadTimeout: 3000
+    MaxTotalHttpConnections: 500
+    MaxConnectionsPerHost: 100
+
+
+#  * NFLoadBalancerClassName: should implement ILoadBalancer
+#  * NFLoadBalanceerRuleClassName: should implement IRuld
+#  * NFLoadBalancePingClassName: should implement IPing
+#  * NIWSServerListClassName: should implement ServerList
+#  * NIWServerListFilterClassName: should implement ServerListFilter
+
+#security:
+#  oauth2:
+#    client:
+#      accessTokenUri: http://localhost:8765/auth/oauth/token
+#      user-authorization-uri: http://localhost:8765/auth/oauth/authorize
+#      clientId: webapp
+#    resource:
+#      userInfoUri: http://localhost:8765/auth/user
+#      prefer-token-info: false
+#
+#
+#signing.key: "345345fsdfsf5345"

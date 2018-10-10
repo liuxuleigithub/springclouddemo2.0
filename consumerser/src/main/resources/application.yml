@@ -1,0 +1,59 @@
+spring:
+#  zipkin:              #不集成kafka配置方式   通过http追踪
+#    baseUrl:  localhost:9411
+  sleuth:
+        web:
+          client:
+            enabled: true
+        sampler:
+          percentage: 1
+  cloud:              #kafka集成方式   数据先存储在kafka中然后zipkin从kafka中读取追踪数据
+      stream:
+         kafka:
+             binder:
+                 brokers: 127.0.0.1
+                 defaultBrokerPort: 9092
+                 zkNodes: 127.0.0.1
+                 defaultZkPort: 2181
+                 autoCreateTopics: true
+                 autoAddPartitions: true
+         bindings:
+             inboundOrgChanges:     #自定义接收通道
+                destination:  orgChangeTopic
+                content-type: application/json
+                group: licensingGroup
+             inboundOrgChanges2:     #自定义通道
+                destination:  orgChangeTopic2
+                content-type: application/json
+                group: licensingGroup2
+             input:     #默认接收通道
+                destination:  orgChangeTopicDefault
+                content-type: application/json
+                group: licensingGroupDefault
+
+eureka:
+  instance:
+    lease-expiration-duration-in-seconds: 20
+    lease-renewal-interval-in-seconds: 10
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}:${spring.application.name}
+  client:
+    registry-fetch-interval-seconds: 10
+    healthcheck:
+      enabled: true
+
+feign:  ##集成feign时启用hystrix
+  hystrix:
+    enabled: true
+  httpclient:
+      enabled: true
+
+
+security:
+  oauth2:
+   resource:
+      id: consumerser
+      user-info-uri: http://localhost:8765/auth/user
+#      accessTokenUri: http://localhost:8765/auth/oauth/token
+      prefer-token-info: false
+

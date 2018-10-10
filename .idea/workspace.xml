@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="36" />
+    <option name="y" value="23" />
+    <option name="width" value="1404" />
+    <option name="height" value="877" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.ProductorserApplication">
+    <configuration name="ConfigserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="configser" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.share.configser.ConfigserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsumerSerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="consumerser" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.demo.consumerser.ConsumerSerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurakeserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="eurakeser" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.share.eurakeser.EurakeserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OauthSerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="oauthser" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.share.oauth.OauthSerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductorserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="productorser" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.demo.productorser.ProductorserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TurbineserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="turbineser" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.share.turbineser.TurbineserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZipkinserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="zipkinser" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.share.zipkinser.ZipkinserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZuulserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="zuulser" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.share.zuulser.ZuulserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.ProductorserApplication" />
+      <item itemvalue="Spring Boot.ConsumerSerApplication" />
+      <item itemvalue="Spring Boot.OauthSerApplication" />
+      <item itemvalue="Spring Boot.TurbineserApplication" />
+      <item itemvalue="Spring Boot.ZipkinserApplication" />
+      <item itemvalue="Spring Boot.ZuulserApplication" />
+      <item itemvalue="Spring Boot.EurakeserApplication" />
+      <item itemvalue="Spring Boot.ConfigserApplication" />
+    </list>
+  </component>
+</project>

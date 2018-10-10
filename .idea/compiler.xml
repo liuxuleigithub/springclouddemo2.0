@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="configser" />
+        <module name="consumerser" />
+        <module name="eurakeser" />
+        <module name="oauthser" />
+        <module name="productorser" />
+        <module name="spring-cloud-demo" />
+        <module name="springclouddemo" />
+        <module name="turbineser" />
+        <module name="zipkinser" />
+        <module name="zuulser" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="configser" target="1.8" />
+      <module name="consumerser" target="1.8" />
+      <module name="eurakeser" target="1.8" />
+      <module name="monitor" target="1.8" />
+      <module name="oauthser" target="1.8" />
+      <module name="productorser" target="1.8" />
+      <module name="spring-cloud-demo" target="1.8" />
+      <module name="springclouddemo" target="1.8" />
+      <module name="turbineser" target="1.8" />
+      <module name="zipkinser" target="1.8" />
+      <module name="zuulser" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

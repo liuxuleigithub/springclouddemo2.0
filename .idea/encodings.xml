@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/configser" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumerser" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eurakeser" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/monitor" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/oauthser" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/productorser" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/turbineser" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zipkinser" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zuulser" charset="UTF-8" />
+  </component>
+</project>

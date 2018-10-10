@@ -1,0 +1,32 @@
+spring:
+#  zipkin:              #不集成kafka配置方式   通过http追踪
+#    baseUrl:  localhost:9411
+  sleuth:
+        web:
+          client:
+            enabled: true
+        sampler:
+          percentage: 0     #监控比例 默认0.1  percent的值
+  cloud:              #kafka集成方式   数据先存储在kafka中然后zipkin从kafka中读取追踪数据
+      stream:
+         kafka:
+           binder:
+             brokers: 127.0.0.1
+             defaultBrokerPort: 9092
+             zkNodes: 127.0.0.1
+             defaultZkPort: 2181
+             minPartitionCount: 1
+             autoCreateTopics: true
+             autoAddPartitions: true
+
+
+eureka:
+  instance:
+    lease-expiration-duration-in-seconds: 20
+    lease-renewal-interval-in-seconds: 10
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}:${spring.application.name}
+  client:
+    registry-fetch-interval-seconds: 10
+    healthcheck:
+      enabled: true

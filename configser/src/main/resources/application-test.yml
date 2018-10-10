@@ -1,0 +1,40 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+      server:
+        encrypt.enabled: false
+        git:
+          uri: https://github.com/liuxuleigitpub/config/
+          searchPaths: test
+          username: liuxuleigitpub
+          password: nE8OM@sa%
+    stream:
+      kafka:      #kafka zookeeper绑定地址
+        binder:
+          brokers: 127.0.0.1        #kafka地址
+          defaultBrokerPort: 9092       #kafka默认端口
+          zkNodes: 127.0.0.1      #zookeeper地址
+          defaultZkPort: 2181       #zookeeper默认端口
+          autoCreateTopics: true
+          autoAddPartitions: true
+
+####
+#Classpath and file-based solution
+####
+
+#server:
+#   port: 8888
+#spring:
+#  profiles:
+#    active: native
+#  cloud:
+#     config:
+#       server:
+#           native:
+#              searchLocations: confsvr/src/main/resources/config/licensingservice,
+#                               confsvr/src/main/resources/config/organizationservice
+##              #searchLocations: classpath:config/,classpath:config/licensingservice
+
+

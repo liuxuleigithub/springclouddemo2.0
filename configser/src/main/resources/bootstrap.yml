@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: configser
+  profiles:
+      active: prod    #配置多环境切换 方便打包发布
+server:
+  port: 8763
+
+eureka:
+  instance:
+    lease-expiration-duration-in-seconds: 20
+    lease-renewal-interval-in-seconds: 10
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}:${spring.application.name}
+  client:
+    registry-fetch-interval-seconds: 10
+    service-url:
+            defaultZone: http://localhost:8761/eureka/
+    healthcheck:
+      enabled: true
+
+security:
+  user:
+    name: config
+    password: 123456
