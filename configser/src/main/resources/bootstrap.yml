@@ -3,6 +3,10 @@ spring:
     name: configser
   profiles:
       active: prod    #配置多环境切换 方便打包发布
+  security:        #F版移至spring下
+    user:
+      name: config
+      password: 123456
 server:
   port: 8763
 
@@ -19,7 +23,4 @@ eureka:
     healthcheck:
       enabled: true
 
-security:
-  user:
-    name: config
-    password: 123456
+

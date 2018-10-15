@@ -5,12 +5,12 @@ eureka:
 spring:
   application:
     name: zipkinser
+  security:
+    basic:
+      enabled: true
+    user:
+      name: admin
+      password: 123456
 server:
   port: 9411
 
-security:
-  basic:
-    enabled: true
-  user:
-    name: admin
-    password: 123456

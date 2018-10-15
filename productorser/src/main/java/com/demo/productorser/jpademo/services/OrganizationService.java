@@ -42,7 +42,9 @@ public class OrganizationService {
     }
 
      public Organization getOrg(String organizationId) {
-            return orgRepository.findById(organizationId);
+        Organization organization =  new Organization();
+        organization.setId(organizationId);
+            return orgRepository.findById(organization);
      }
 
     public void saveOrg(Organization org){
@@ -57,6 +59,8 @@ public class OrganizationService {
     }
 
     public void deleteOrg(String orgId){
-        orgRepository.delete( orgId );
+        Organization organization =  new Organization();
+        organization.setId(orgId);
+        orgRepository.delete( organization );
     }
 }

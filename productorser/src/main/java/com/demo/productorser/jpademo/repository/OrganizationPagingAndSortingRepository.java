@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface OrganizationPagingAndSortingRepository extends PagingAndSortingRepository<Organization,String> {
-    public Organization findById(String organizationId);
+//    public Organization findById(String organizationId);
 }
